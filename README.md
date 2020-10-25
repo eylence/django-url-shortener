@@ -1,6 +1,6 @@
-#### Django URL Shortener with Django REST framework
+# Django URL Shortener with Django REST framework
 
-##### Installation
+## Installation
 
 `git clone https://github.com/eylence/django-url-shortener.git`
 
@@ -10,7 +10,7 @@
 
 `python manage.py runserver`
 
-##### Sample Request & Response
+## Sample Request & Response
 ```shell
 ~$ curl -d '{"url": "https://www.youtube.com/watch?v=u_LAG1RQkCs"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/shorten/
 ```
