@@ -11,8 +11,8 @@
 `python manage.py runserver`
 
 ##### Sample Request & Response
-```bash
-curl -d '{"url": "https://www.youtube.com/watch?v=u_LAG1RQkCs"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/shorten/
+```shell
+~$ curl -d '{"url": "https://www.youtube.com/watch?v=u_LAG1RQkCs"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/shorten/
 ```
 
 ```json
@@ -20,4 +20,9 @@ curl -d '{"url": "https://www.youtube.com/watch?v=u_LAG1RQkCs"}' -H "Content-Typ
     "url":"https://www.youtube.com/watch?v=u_LAG1RQkCs",
     "shortened_url":"https://SHORTURL/4rGjQR"
 }
+```
+
+```shell
+~$ curl -sI http://127.0.0.1:8000/4rGjQR | grep Location
+Location: https://www.youtube.com/watch?v=u_LAG1RQkCs
 ```
